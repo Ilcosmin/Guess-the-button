@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Guess the button</title>
+
+<style type="text/css">
+	
+	#button1, #button2, #button3 {
+		width: 100px;
+		height: 100px;
+		font-size: 20px;
+	}
+
+	p {
+		font-size: 20px;
+		text-align: center;
+	}
+
+</style>
+
+</head>
+<body>
+	<h1 align="center">Guess the button</h1>
+
+	<div align="center">
+
+		<button name="button" type="button" id="button1" onclick="chooseFunction1()">1</button>
+		<button name="button" type="button" id="button2" onclick="chooseFunction2()">2</button>
+		<button name="button" type="button" id="button3" onclick="chooseFunction3()">3</button>
+
+	</div>
+
+
+	<script>
+
+	picks = [1, 2, 3];
+	var randomIndex = picks[Math.floor(Math.random() * picks.length)];
+
+
+	function chooseFunction1() {
+		if (randomIndex === 1) {
+			document.getElementById("button1").innerHTML = "You win";
+			document.getElementById("button1").style.backgroundColor ="SpringGreen";
+		} else {
+			document.getElementById("button1").innerHTML = "You lost";
+			document.getElementById("button1").style.backgroundColor ="red";
+		}
+	}
+
+	function chooseFunction2() {
+		if (randomIndex === 2) {
+			document.getElementById("button2").innerHTML = "You win";
+			document.getElementById("button2").style.backgroundColor ="SpringGreen";
+		} else {
+			document.getElementById("button2").innerHTML = "You lost";
+			document.getElementById("button2").style.backgroundColor ="red";
+		}
+	}
+
+	function chooseFunction3() {
+		if (randomIndex === 3) {
+			document.getElementById("button3").innerHTML = "You win";
+			document.getElementById("button3").style.backgroundColor ="SpringGreen";
+		} else {
+			document.getElementById("button3").innerHTML = "You lost";
+			document.getElementById("button3").style.backgroundColor ="red";
+		}
+	}
+
+
+	</script>
+	<p>Choose a button and see if you win</p>
+
+</body>
+</html>
