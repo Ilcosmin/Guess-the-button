@@ -1,10 +1,10 @@
-			#button1, #button2, #button3 {
-				width: 100px;
-				height: 100px;
-				font-size: 20px;
-			}
+#button1, #button2, #button3 {
+	width: 100px;
+	height: 100px;
+	font-size: 20px;
+}
 
-			p {
-				font-size: 20px;
-				text-align: center;
-			}
+p {
+	font-size: 20px;
+	text-align: center;
+}
