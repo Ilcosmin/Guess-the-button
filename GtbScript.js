@@ -1,32 +1,29 @@
-picks = [1, 2, 3];
+var picks = ["button1", "button2", "button3"];
 var randomIndex = picks[Math.floor(Math.random() * picks.length)];
 
-function exposeButton1() {
-	if (randomIndex === 1) {
-		document.getElementById("button1").innerHTML = "You win";
-		document.getElementById("button1").style.backgroundColor ="SpringGreen";
-	} else {
-		document.getElementById("button1").innerHTML = "You lost";
-		document.getElementById("button1").style.backgroundColor ="red";
+function expose(id) {
+	let status = "You lost";
+	let color = "red";
+	if (randomIndex === id) {
+		status = "You win";
+		color = "SpringGreen";
+		
 	}
+	document.getElementById(id).innerHTML = status;
+	document.getElementById(id).style.backgroundColor = color;
 }
 
-function exposeButton2() {
-	if (randomIndex === 2) {
-		document.getElementById("button2").innerHTML = "You win";
-		document.getElementById("button2").style.backgroundColor ="SpringGreen";
-	} else {
-		document.getElementById("button2").innerHTML = "You lost";
-		document.getElementById("button2").style.backgroundColor ="red";
-	}
+function button1() {
+	let id = "button1";
+	expose(id);
 }
 
-function exposeButton3() {
-	if (randomIndex === 3) {
-		document.getElementById("button3").innerHTML = "You win";
-		document.getElementById("button3").style.backgroundColor ="SpringGreen";
-	} else {
-		document.getElementById("button3").innerHTML = "You lost";
-		document.getElementById("button3").style.backgroundColor ="red";
-	}
+function button2() {
+	let id = "button2";
+	expose(id);
+}
+
+function button3() {
+	let id = "button3";
+	expose(id);
 }
