@@ -12,18 +12,3 @@ function expose(id) {
 	document.getElementById(id).innerHTML = status;
 	document.getElementById(id).style.backgroundColor = color;
 }
-
-function button1() {
-	let id = "button1";
-	expose(id);
-}
-
-function button2() {
-	let id = "button2";
-	expose(id);
-}
-
-function button3() {
-	let id = "button3";
-	expose(id);
-}
